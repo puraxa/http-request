@@ -14,10 +14,10 @@ function getRequest() {
 }
 
 function postRequest() {
-  var data = {};
+  let data = {};
   data.name = document.getElementById('name').value;
-  var dataJson = JSON.stringify(data);
-  var http = new XMLHttpRequest();
+  let dataJson = JSON.stringify(data);
+  let http = new XMLHttpRequest();
   http.onreadystatechange = function () {
     if (http.readyState == 4 && http.status == 200) {
       let message = JSON.parse(http.responseText);
